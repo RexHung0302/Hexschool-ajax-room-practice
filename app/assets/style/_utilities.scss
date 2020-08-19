@@ -1,0 +1,45 @@
+.font-weight-bold {
+    font-weight: bold!important;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.list-style-decimal {
+    list-style: decimal;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.flex-7 {
+    flex: 0 0 70%;
+}
+
+.flex-3 {
+    flex: 0 0 30%;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.img {
+    transition: all .3s;
+    filter: brightness(100%);
+    transform: scale(1);
+    &:hover {
+        filter: brightness(105%);
+        transform: scale(1.2);
+    }
+}
+
+.text-opacity {
+    opacity: 0.4;
+}
