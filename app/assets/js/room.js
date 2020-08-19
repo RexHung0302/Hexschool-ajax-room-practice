@@ -52,7 +52,6 @@ const initHandler = () => {
 
   // 渲染畫面
   function renderHandler() {
-    console.log(roomInfo);
     let str = "";
     str += `<div class="d-flex" style="height: 500px;">
     <div class="h-100 flex-7 overflow-hidden">
