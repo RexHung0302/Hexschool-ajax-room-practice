@@ -22,6 +22,10 @@
 
 關於 API 的取的方法可餐考 [第五十天的題目解答](https://rexhung0302.github.io/2020/07/29/20200729/#Day50)。
 
+[點我觀看系列文章 [Hexschool JS60 Training] — 60天 JavaScript 學徒試煉 Day1-30](https://rexhung0302.github.io/2020/06/07/20200607/)
+
+[點我觀看系列文章 [Hexschool JS60 Training] — 60天 JavaScript 學徒試煉 Day31-60](https://rexhung0302.github.io/2020/07/29/20200729/)
+
 ---
 
 ## 環境 domain 說明
