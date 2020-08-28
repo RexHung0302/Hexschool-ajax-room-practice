@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>房間詳細資訊</title>
+  <!-- Plugins -->
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <!-- Plugins -->
+  <script src="./assets/js/vendors.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <!-- Config JS -->
+  <script src="./assets/js/config.js"></script>
+  <!-- DataRange -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <!-- Main JS -->
+  <script src="./assets/js/all.js"></script>
+</head>
+
+<body>
+  <section class="content">
+    <header class="header text-center bg-dark py-2">
+      <div class="container h-100">
+        <h1 class="m-0 h-100">
+          <a href="./index.html" class="h-100">
+            <img src="./assets/images/logo.png" alt="logo" class="img-fluid h-100">
+          </a>
+        </h1>
+      </div>
+    </header>
+    <!-- 內容 -->
+    <main class="main d-none" id="main">
+      <!-- 模板塞入 -->
+      <section>
+    <!-- 預約彈窗 -->
+    <div
+        class="modal fade"
+        id="reservationModal"
+        tabindex="-1"
+        aria-labelledby="modalTitle"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">預約</h5>
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <div class="form-group">
+                        <label for="name">訂房者姓名</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">訂房者電話</label>
+                        <input type="tel" class="form-control" id="mobile" aria-describedby="mobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationTimeInput">訂房時間</label>
+                        <input type="text" name="dates" id="reservationTimeInput" value="" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info text-white" onclick="reservationHandler()">預約</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 預約記錄彈窗 -->
+    <div
+        class="modal fade"
+        id="recordModal"
+        tabindex="-1"
+        aria-labelledby="modalTitle"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="record_modalTitle">預約紀錄</h5>
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="record_modalBody">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-column">
+        <div id="info">
+            <!-- 放房間的資料 -->
+            <div class="d-flex banner" id="banner_part"></div>
+            <hr class="border border-dark m-0">
+            <section class="container p-2 pt-4">
+                <div class="row mb-4">
+                    <div class="col-12 col-md-8 mb-4 mb-md-0" id="room_info_part"></div>
+                    <div class="col-12 col-md-4">
+                        <div class="border border-black bg-black border-width-lg">
+                            <div class="p-3">
+                                <div class="row no-gutters">
+                                    <div class="col-6 px-1">
+                                        <button
+                                            class="btn btn-info btn-block text-white w-100"
+                                            type="button"
+                                            data-toggle="modal"
+                                            data-target="#reservationModal"
+                                        >預約</button>
+                                    </div>
+                                    <div class="col-6 px-1">
+                                        <button
+                                            class="btn btn-primary btn-block text-white w-100"
+                                            type="button"
+                                            data-toggle="modal"
+                                            data-target="#recordModal"
+                                            onclick="showRecordHandler()"
+                                        >預約紀錄</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-primary btn-block" type="button" href="./index.html">回首頁</a>
+            </section>
+        </div>
+    </div>
+</section>
+<script src="./assets/js/room.js"></script>
+
+    </main>
+  </section>
+</body>
+
+</html>
